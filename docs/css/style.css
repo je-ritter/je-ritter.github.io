@@ -1,0 +1,107 @@
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: medium;
+  color: #202020;
+  }
+
+h1, h2, h3 {
+  font-family: 'Josefin Slab', serif;
+}
+
+.container h1 {
+  color: #202020;
+}
+
+.container p {
+  color: #202020;
+}
+
+.container h2 {
+  color: #202020;
+}
+
+.py-5 bg-image-full {
+  padding-bottom: 50px;
+}
+
+.nav-font {
+  font-family: 'Lato', sans-serif;
+}
+
+.linkylinks  {
+  color: #202020;
+}
+
+.fancyj {
+  font-family: 'Josefin Slab', serif;
+}
+
+footer div p {
+  font-family: 'Josefin Slab', serif;
+  font-size: smaller;
+  font-weight: 500;        
+}
+
+.bg-dark {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+}
+
+.front-page.card {
+  margin-bottom: 3;
+  width: 800px;
+  background: none;
+  border: none;
+  margin-bottom: 50px;
+}
+
+.front-page.col-md-4 {
+  margin-top: 75px;
+  margin-left: 25px;
+}
+
+.card-title {
+  color: #202020;
+  margin-left: 50px;
+  font-family: 'Josefin Slab', serif;
+}
+
+.card-title.h4 {
+  margin-top: 25px;
+}
+
+h2 .card-title {
+  margin-top: 50px;
+  font-size: larger;
+}
+
+
+.card-text {
+  color: #202020;
+  margin-left: 50px;
+  margin-bottom: 75px;
+}
+
+.background {
+  background: url(../img/Moonrise.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.side-widet a {
+  color: #202020;
+}
+
+.side-widet a:hover {
+  text-decoration: none;
+  color: #202020;
+}
+
+.photo-carousel {
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
