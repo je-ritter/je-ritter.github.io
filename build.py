@@ -17,13 +17,17 @@ pages = [
     "filename": "./content/blog.html",
     "output": "./docs/blog.html",
     "title": "Jake Ritter | Blog",
+    #"link_replacement": "{{blog_link_active}}"
     }
 ]
 
 
 # Preps Pages and starts template creation. Replacing original content.
+#def apply_template(input_page):
 def apply_template():
     template = open("./templates/base.html").read()
+    #input_content = open(input_page["filename"]).read()
+    #updated_title = input_page["title"]
     input_content = open(page["filename"]).read()
     updated_title = page["title"]
 
@@ -63,6 +67,7 @@ def main():
 
 # Runs the functions and pushes out the site we want
 for page in pages:
+    #apply_template(page)
     new_page = apply_template()
     new_home = apply_active_link()
     new_about = apply_active_link()
