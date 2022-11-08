@@ -1,0 +1,64 @@
+.background {
+	background: linear-gradient(30deg, #c5add9, #9d8aad, #add9c5, #afadd9);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	width: 100%;
+  overflow-x: hidden;
+  min-height: calc(100vh - 80px);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.home--content {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	justify-content: center;
+	justify-content: space-around;
+	font-family: 'Rajdhani', sans-serif;
+
+}
+
+.home--content a {
+	color: black;
+}
+
+.home--title {
+	grid-column-start: 1;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	justify-self: center;
+	margin-top: 15%;
+	font-family: 'Rajdhani', sans-serif;
+}
+
+.home--subTitle {
+	text-align: center;
+}
+
+.home--links {
+	grid-column-start: 1;
+	grid-row-start: 2;
+	justify-self: center;
+	text-align: left;
+	align-self: start;
+}
+
+footer {
+	font-family: 'Rajdhani', sans-serif;
+	position: fixed;
+  bottom: 0;
+  height: 60px;
+	min-width: 100%;
+}
+
