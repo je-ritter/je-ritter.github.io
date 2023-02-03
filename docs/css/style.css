@@ -1,3 +1,23 @@
+/* Custom Scroll Bar */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+	background: #c5add987;
+
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(20, 19, 19);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(20, 20, 20, 0.716);
+  border-radius: 5px;
+}
+
 .background {
 	background: linear-gradient(30deg, #c5add9, #9d8aad, #add9c5, #afadd9);
 	background-size: 400% 400%;

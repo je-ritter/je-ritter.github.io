@@ -17,11 +17,9 @@ pages = [
 
 
 # Preps Pages and starts template creation. Replacing original content.
-#def apply_template(input_page):
-def apply_template():
+def apply_template(page):
+    
     template = open("./templates/base.html").read()
-    #input_content = open(input_page["filename"]).read()
-    #updated_title = input_page["title"]
     input_content = open(page["filename"]).read()
     updated_title = page["title"]
 
@@ -30,34 +28,24 @@ def apply_template():
     return new_page
 
 # Replaces link placeholders in template to allow site to be "active"
-def apply_active_link():
+def apply_active_link(new_page, page):
     if page["title"] == "Jake Ritter | Home":
-        new_home = new_page.replace("{{home_link_active}}", " active")
-        return new_home
-    elif page["title"] == "Jake Ritter | blog":
-        new_blog = new_page.replace("{{blog_link_active}}", " active")
-        return new_blog
+        return new_page.replace("{{home_link_active}}", " active")
+    elif page["title"] == "Jake Ritter | Blog":
+        return new_page.replace("{{blog_link_active}}", " active")
     else:
         print(">>>> " + page["title"] + " <<<< has not been updated")
+        return new_page
 
 # Finishes and writes updated pages
-def main():
+def main(page, new_page):
     output = page["output"]
-    
-    if output == "./docs/index.html": 
-        open(output, "w+").write(new_home)
-        print("LINK ACTIVE FOR " + page["title"])   
-    elif output == "./docs/blog.html": 
-        open(output, "w+").write(new_blog)
-        print("LINK ACTIVE FOR " + page["title"])
-    else:
-        open(output, "w+").write(new_page)
+    open(output, "w+").write(new_page)
+    print("LINK ACTIVE FOR " + page["title"])
 
 # Runs the functions and pushes out the site we want
 for page in pages:
-    #apply_template(page)
-    new_page = apply_template()
-    new_home = apply_active_link()
-    new_blog = apply_active_link()
-    main()
+    new_page = apply_template(page)
+    new_page = apply_active_link(new_page, page)
+    main(page, new_page)
 
